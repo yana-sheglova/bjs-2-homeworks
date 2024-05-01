@@ -21,4 +21,4 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
 	let paymet = s * (p + (p / (((1 + p) ** countMonths) - 1)));
 	let totalAmount = paymet * countMonths;
 	return +totalAmount.toFixed(2);
-}5
+};
