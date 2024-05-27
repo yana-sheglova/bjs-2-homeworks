@@ -20,11 +20,10 @@ Student.prototype.addMarks = function(...marks) {
 };
 
 Student.prototype.getAverage = function() {
-	if (this.marks.length === 0) {
+	if (this.hasOwnProperty('marks') === false || this.marks.length === 0) {
 		return 0;
-	} else {
-		return this.marks.reduce((acc, item) => acc + item, 0) / this.marks.length;
-	}
+	};
+	return this.marks.reduce((acc, item) => acc + item, 0) / this.marks.length;
 };
 
 Student.prototype.exclude = function(reason) {
