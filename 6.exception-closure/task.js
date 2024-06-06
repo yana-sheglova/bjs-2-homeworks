@@ -39,13 +39,3 @@ class Triangle {
 	};
 };
 
-function getTriangle(a, b, c) {
-	try {
-		return new Triangle(a, b, c)
-	} catch (error) {
-		return {
-			perimeter: 'Ошибка! Треугольник не существует',
-            area: 'Ошибка! Треугольник не существует',
-		}
-	}
-}
